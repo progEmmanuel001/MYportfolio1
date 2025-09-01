@@ -1,0 +1,256 @@
+body{
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+    
+}
+  /* logo */
+.mylogo{
+      background-image: linear-gradient(to right, cyan, skyblue);
+      width: 25%;
+      height: 40px;
+      border-radius: 9px;
+    }
+.mylogo img{
+width: 100%;
+ height: 100%;
+}
+  /* head div */
+.head{
+    display: flex;
+    width: 200px;
+    gap: 10px;
+    color: white;
+}
+.logo-text{
+    width: 75%;
+}
+  /* nav */
+nav a{
+    position: relative;
+    color: cyan;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 900px;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #00ffb3;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s;
+  }
+nav a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 10px #00ffb3, 0 0 20px #00ffb3;
+  }
+nav{
+     margin-top: 10px;
+    position: absolute;
+    right: 0;
+}
+header{
+    width: 100%;
+    display: flex;
+    position: sticky;
+}
+  /* about cont. */
+.container{
+    margin-top: 30px;
+    display: flex;
+}
+.contact{
+    margin-top: 10px;
+    height: 50px;
+    width: 350px;
+    justify-content: space-between;
+}
+.contact a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    color: skyblue;
+    border: 2px solid cyan ;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.contact a:active{
+  text-decoration: overline;
+  text-decoration-color: cyan;
+}
+.contact a:hover{
+    color: black;
+    font-weight: 900;
+}
+.contact a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: #00ffb3;
+    left: 0;
+    transition: width 0.3s;
+    z-index: -1;
+  }
+.contact a:hover::after {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+  }
+.avater{
+    margin-left: 100px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 10px cyan;
+    background-color: cyan;
+    border-radius: 50%;
+    overflow: hidden;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0%{ 
+      box-shadow: 0 0 10px cyan;
+    }
+     25%{ 
+       box-shadow: 0 0 20px cyan;
+    }
+     50%{ 
+        box-shadow: 0 0 30px cyan;
+    }
+     75%{ 
+       box-shadow: 0 0 20px cyan;
+    }
+     100%{ 
+        box-shadow: 0 0 10px cyan;
+    }
+   
+}
+.text{
+    padding-top: 50px;
+    margin-left: 300px;
+}
+.detail{
+    margin-top: 100px;
+   margin-left: 20%; 
+}
+  /* card divs */
+.card{
+    
+    width: 20vw;
+    border: 3px solid cyan;
+    border-radius: 9px;
+    margin-top: 20px;
+    text-align: center;
+}
+.card1{
+   margin-left: 10%;
+}
+.card2{
+   margin-left: 50%;
+}
+.course {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 40px;
+    }
+      /* Vertical div */
+.timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* Vertical line */
+.timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #00f7ff;
+      top: 0;
+      bottom: 0;
+      left: 47%;
+      margin-left: -2px;
+    }
+.content {
+      background: transparent;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00f7ff;
+      position: relative;
+    }
+
+.card1 .content {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+.card2 .content {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  /* media screens */
+  @media screen and (max-width: 1000px) {
+    .text{
+    padding-top: 50px;
+    margin-left: 50px;
+}
+nav{
+     margin-top: 20px;
+     margin-bottom: 20px;
+    position: absolute;
+    left: 40px;
+    text-align: center;
+}
+}
+@media screen and (max-width: 700px) {
+    .container{
+        display: block;
+        margin-top: 80px;
+    }
+    .text{
+    padding-top: 50px;
+    margin-left: 120px;
+}
+header{
+    width: 100%;
+    display: block;
+   
+}
+nav{
+     margin-top: 20px;
+     margin-bottom: 20px;
+    position: absolute;
+    left: 20px;
+    text-align: center;
+}
+.card{
+    width: 40vw;
+    border: 3px solid cyan;
+    border-radius: 9px;
+    margin-top: 20px;
+    text-align: center;
+}
+.card2{
+   margin-left: 50%;
+}
+.detail{
+    margin-top: 50px;
+   margin-left: 3%; 
+}
+.card1{
+    width: 45%;
+      margin-left: 1%;
+}
+}
